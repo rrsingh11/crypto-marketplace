@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from './components/Home'
 import Signup from './components/Signup'
 import Footer from './components/Footer'
+// import Chatbot from "./components/chatbot/Chatbot";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <Home/>
     <Featured />
     <Signup />
+    {/* <Chatbot /> */}
     <Footer />
     </>
   );
