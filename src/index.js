@@ -7,11 +7,12 @@ import Messages from "./components/Messages";
 import Input from "./components/Input";
 
 import API from "./ChatbotAPI";
-
+import Chatbutton from "./components/ChatBtn";
 import "./styles.css";
 import Header from "./components/Header";
 
 function Chatbot() {
+ 
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
@@ -37,12 +38,17 @@ function Chatbot() {
     setMessages(newMessages);
   };
 
+
   return (
-    <div className="chatbot">
-      <Header />
-      <Messages messages={messages} />
-      <Input onSend={send} />
+  <>
+   <div className="chatbot">
+        <Header />
+        <Messages messages={messages} />
+        <Input onSend={send} />
+        <Chatbutton />
     </div>
+
+  </>
   );
 }
 
