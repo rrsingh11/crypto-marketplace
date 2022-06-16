@@ -24,17 +24,10 @@ const Featured = () => {
 
     return (
         <div className='featured'>
+            <h1>Top Cryptocurrencies</h1>
             <div className='container'>
                 {/* Left */}
                 <div className='left'>
-                    <h2>Explore top Crypto's Like Bitcoin, Ethereum, and Dogecoin</h2>
-                    <p>See all available assets: Cryptocurrencies and NFT's</p>
-                    <button className='btn'> See More Coins </button>
-                </div>
-
-                {/* Right */}
-
-                <div className='right'>
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/' /> */}
@@ -162,6 +155,14 @@ const Featured = () => {
                                 </span>
                             )}
                     </div>
+                </div>
+
+                {/* Right */}
+
+                <div className='right'>
+                    <h2>Explore top Crypto's Like Bitcoin, Ethereum, and Dogecoin</h2>
+                    <p>See all available assets: Cryptocurrencies and NFT's</p>
+                    <button className='btn'> See More Coins </button>
                 </div>
             </div>
 
