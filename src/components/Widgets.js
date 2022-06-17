@@ -11,15 +11,15 @@ function Widgets() {
       <h1 style={{textAlign:"center",fontSize:"40px"}}>Live Price Chart</h1>
         <div className='graphs'>
             <div className='graph-1'>
-             <Helmet>
-             <script src="https://crypto.com/price/static/widget/index.js"></script>
-             </Helmet> 
-              <div
+             
+             <div
                 id="crypto-widget-CoinList"
                 data-design="classic"
                 data-coin-ids="1,166,136,1120,382,1694,440,20,1986">
               </div>
-            
+              <Helmet>
+             <script src="https://crypto.com/price/static/widget/index.js"></script>
+             </Helmet> 
             </div>
             <div className='graph-2'>
               {/* <Helmet>

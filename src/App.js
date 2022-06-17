@@ -6,6 +6,7 @@ import Signup from './components/Signup'
 // import FooterComp from './components/Footer'
 // import Chatbot from "./components/chatbot/Chatbot";
 import Widgets from "./components/Widgets";
+import CoinCalculator from "./components/CoinCalculator";
 import Testimonials from "./components/Testimonials"
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <Home/>
     <Featured />
     <Widgets/>
+    <CoinCalculator/>
     <Signup />
     {/* <Chatbot /> */}
     <Testimonials/>
