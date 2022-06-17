@@ -43,3 +43,22 @@
     width: 80%;
     /* border: 2px solid red; */
 }
+
+@media screen and (max-width: 940px) {
+    .container-widget {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px;
+    }
+
+    .featured .right .btn {
+        align-self: center;
+    }
+}
+
+
+@media screen and (max-width: 478px) {
+    .featured .container .left .card {
+        width: 100%;
+    }
+}
