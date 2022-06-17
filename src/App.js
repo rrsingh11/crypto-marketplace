@@ -3,8 +3,10 @@ import Featured from './components/Featured'
 import Navbar from "./components/Navbar";
 import Home from './components/Home'
 import Signup from './components/Signup'
-import Footer from './components/Footer'
+// import FooterComp from './components/Footer'
 // import Chatbot from "./components/chatbot/Chatbot";
+import Widgets from "./components/Widgets";
+import Testimonials from "./components/Testimonials"
 
 function App() {
   return (
@@ -12,9 +14,11 @@ function App() {
     <Navbar/>
     <Home/>
     <Featured />
+    <Widgets/>
     <Signup />
     {/* <Chatbot /> */}
-    <Footer />
+    <Testimonials/>
+    {/* <FooterComp /> */}
     </>
   );
 }

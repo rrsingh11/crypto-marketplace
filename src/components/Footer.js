@@ -1,52 +1,36 @@
-import React from 'react'
-import {FaFacebook, FaGithub, FaLinkedin, FaTwitter} from 'react-icons/fa'
+
+import React from 'react';
+import footer_logo from '../assets/footer_logo.png';
 import './Footer.css'
 
-const Footer = () => {
-    return (
-        <div className='footer'>
-            <div className='container'>
-                <div className='col col-1'>
-                    <h1>Bitbe</h1>
-                </div>
-                <div className='col'>
-                    <h5>Support</h5>
-                    <span className='bar'></span>
-                        <a href='/'>Contact Us</a>
-                        <a href='/'>Chat</a>
-                        <a href='/'>Help Center</a>
-                        <a href='/'>FAQ</a>
+const FooterComp = () => {
+	return (
+		<div>
+		<div className="footer">
+			<div className="footer_comp">
+				<img src={footer_logo} alt="footer_logo"></img>
+			</div>
+			<div className="footer_comp">
+				<p>About Us</p>
+				<p>Contact Us</p>
+				<p>Apply for Listing</p>
+			</div>
+			<div className="footer_comp">
+				<p>User Agreement</p>
+				<p>Privacy Policy</p>
+				<p>Disclaimer</p>
+			</div>
+			<div className="footer_comp">
+				<p>Fee Structure</p>
+				<p>API Doc</p>
+				<p>Notice</p>
+			</div>
+		</div>
+		<div classname="hr"></div>
+		<p className='copyright'>Copyright &copy; Bitbe 2022. All rights reserved</p>
+		</div>
+	)
 
-                </div>
-                <div className='col'>
-                    <h5>Developers</h5>
-                    <span className='bar'> </span>
-                        <a href='/'>Cloud</a>
-                        <a href='/'>Commerce</a>
-                        <a href='/'>Pro</a>
-                        <a href='/'>API</a>
-                   
-                </div>
-                <div className='col'>
-                    <h5>Company</h5>
-                    <span className='bar'> </span>
-                        <a href='/'>About</a>
-                        <a href='/'>Information</a>
-                        <a href='/'>Legal</a>
-                        <a href='/'>Privacy</a>
-                </div>
-                <div className='col'>
-                    <h5>Social</h5>
-                    <span className='bar'> </span>
-                        <a href='/'><FaFacebook className='icon'/></a>
-                        <a href='/'><FaTwitter className='icon'/></a>
-                        <a href='/'><FaLinkedin className='icon'/></a>
-                        <a href='/'><FaGithub className='icon'/></a>
-                </div>
-            </div>
-            
-        </div>
-    )
 }
 
-export default Footer
+export default FooterComp
