@@ -88,11 +88,11 @@ const Footer = () => {
                 <a href="#">Bitbe groups.</a>
               </div>
             </div>
-            <div className="cards-column">
+            {/* <div className="cards-column">
               <div className="cards">
                 <img src="images/resource/cards.png" alt="" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

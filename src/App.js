@@ -1,5 +1,6 @@
 import React from "react";
 import TopBand from "./components/TopBand";
+import NavbarComp from './components/Navbar'
 import Featured from './components/Featured'
 // import Navbar from "./components/Navbar";
 import Home from './components/Home'
@@ -15,6 +16,7 @@ function App() {
     <>
     <TopBand />
     {/* <Navbar/> */}
+    <NavbarComp/>
     <Home/>
     <Featured />
     <Widgets/>
