@@ -1,5 +1,6 @@
 import React from "react";
 import "./footerNew.css";
+import Footer_log from '../assets/footer_logo.png'
 
 const Footer = () => {
   return (
@@ -75,6 +76,7 @@ const Footer = () => {
                 Foundation <br /> Soeul, South Korea.
               </li>
             </ul>
+            <img src={Footer_log}/>
           </div>
         </div>
       </div>
