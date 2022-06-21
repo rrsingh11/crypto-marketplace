@@ -5,7 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import './Testimonials.css'
 import { Avatar } from '@mui/material'
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
-import { textAlign } from '@mui/system';
+// import { textAlign } from '@mui/system';
+import ajay from '../assets/ajay_goyal.jpg'
 
 const PreviousBtn = (props) => {
   console.log(props);
@@ -43,7 +44,7 @@ function Testimonials() {
       nextArrow={<NextBtn />}
       dots
       >
-        <Card img='..\assets\ajay_goyal.jpg'/>
+        <Card img={ajay}/>
         <Card img='../assets/Pawel_Rosik.jpg'/>
         <Card img='../assets/charmant_lee.jpg'/>
       </Slider>
