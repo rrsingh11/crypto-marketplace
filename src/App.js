@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import CoinTable from "./components/Widgets";
 // import CoinCalculator from "./components/CoinCalculator";
 import Testimonials from "./components/Testimonials"
+import PreFooter from "./components/PreFooter";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
     <Signup />
     {/* <Chatbot /> */}
     <Testimonials/>
+    <PreFooter/>
     <Footer />
     </>
   );

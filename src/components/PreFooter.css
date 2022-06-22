@@ -1,0 +1,29 @@
+
+.grand-parent {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgba(199, 237, 237, 0.95);
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -30px;
+}
+
+.parent {
+    width: 80vw;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    transition: all 0.2 linear ;
+}
+
+.child {
+    height: 150px;
+    flex: 1 1 150px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
