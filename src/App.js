@@ -8,7 +8,7 @@ import Signup from './components/Signup'
 import Footer from './components/Footer'
 // import Chatbot from "./components/chatbot/Chatbot";
 import CoinTable from "./components/Widgets";
-import CoinCalculator from "./components/CoinCalculator";
+// import CoinCalculator from "./components/CoinCalculator";
 import Testimonials from "./components/Testimonials"
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
     <Home/>
     <Featured />
     <CoinTable/>
-    <CoinCalculator/>
+    {/* <CoinCalculator/> */}
     <Signup />
     {/* <Chatbot /> */}
     <Testimonials/>

@@ -45,8 +45,6 @@ function Testimonials() {
       dots
       >
         <Card img={ajay}/>
-        <Card img='../assets/Pawel_Rosik.jpg'/>
-        <Card img='../assets/charmant_lee.jpg'/>
       </Slider>
     </div>
     </div>
