@@ -1,54 +1,149 @@
-import React from 'react'
-import { Helmet } from "react-helmet"
-import './Widgets.css'
+import './Widgets.css';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+// import { textAlign, width } from '@mui/system';
 
-
-function Widgets() {
-
-  
+const Coin = ({
+  name,
+  price,
+  symbol,
+  marketcap,
+  volume,
+  image,
+  priceChange
+}) => {
   return (
-    <div className='container-widget'>
-      <h1 style={{textAlign:"center",fontSize:"40px"}}>Live Price Chart</h1>
-        <div className='graphs'>
-            <div className='graph-1'>
-             
-             <div
-                id="crypto-widget-CoinList"
-                data-design="classic"
-                data-coin-ids="1,166,136,1120,382,1694,440,20,1986">
-              </div>
-              <Helmet>
-             <script src="https://crypto.com/price/static/widget/index.js"></script>
-             </Helmet> 
-            </div>
-            <div className='graph-2'>
-              {/* <Helmet>
-              <script>
-                (function(b,i,t,C,O,I,N) {
-                window.addEventListener('load',function() {
-                if(b.getElementById(C))return;
-                I=b.createElement(i),N=b.getElementsByTagName(i)[0];
-                I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
-                },false)
-                })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
-              </script>
-              </Helmet> */}
-            {/* <div bw-cash="true" className="btcwdgt-chart"></div> */}
-            <div style={{height:"560px", backgroundColor: "#FFFFFF", overflow:"hidden", 
-            boxSizing: "border-box", border: "1px solid #56667F", borderRadius: "4px", 
-            textAlign: "right", lineHeight:"14px", fontSize: "12px", 
-            textSizeAdjust: "100%", boxShadow: "inset 0 -20px 0 0 #56667F",padding:"1px",
-            padding: "0px", margin: "0px", width: "100%"}}>
-            <div style={{height:"540px", padding:"0px", margin:"0px"}}>
-            <iframe src="https://widget.coinlib.io/widget?type=chart&theme=light&coin_id=859&pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style={{border:"0",margin:"0",padding:"0",lineHeight:"14px"}}></iframe></div>
-            </div>
-            </div>
+    <div className='coin-container'>
+      <div className='coin-row'>
+        <div className='coin'>
+          <img src={image} alt='crypto' />
+          <h1>{name}</h1>
+          <p className='coin-symbol'>{symbol}</p>
         </div>
-        <div className='price-table'>
-        <iframe src="https://in.widgets.investing.com/top-cryptocurrencies?theme=darkTheme" width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>
+        <div className='coin-data'>
+          <p className='coin-price'>${price}</p>
+          <p className='coin-volume'>${volume.toLocaleString()}</p>
+
+          {priceChange < 0 ? (
+            <p className='coin-percent red'>{priceChange.toFixed(2)}%</p>
+          ) : (
+            <p className='coin-percent green'>{priceChange.toFixed(2)}%</p>
+          )}
+
+          <p className='coin-marketcap'>
+            ${marketcap.toLocaleString()}
+          </p>
         </div>
+      </div>
     </div>
-  )
+  );
+};
+
+function CoinTable() {
+const [coins, setCoins] =useState([])
+const [search, setSearch]= useState('')
+
+useEffect(()=>{
+  axios
+    .get(
+      'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=7&page=1&sparkline=false'
+    )
+    .then(res => {
+      setCoins(res.data);
+      console.log(res.data);
+    })
+    .catch(error => console.log(error));
+},[])
+
+const handleChange = e => {
+  setSearch(e.target.value);
+};
+
+const filteredCoins = coins.filter(coin =>
+  coin.name.toLowerCase().includes(search.toLowerCase())
+);
+
+return (
+  <div className='coin-app'>
+    <div className='coin-search'>
+      <h1 className='coin-text'>Search a currency</h1>
+      <form>
+        <input
+          className='coin-input'
+          type='text'
+          onChange={handleChange}
+          placeholder='Search'
+        />
+      </form>
+    </div>
+    <div className='table-header' style={{
+      display:'flex',
+      flexDirection:'row',
+      justifyContent:'space-around',
+      alignItems:'center',
+      height:'50px',
+      margin:'0px',
+      // border:'2px solid',
+      width:'100%'
+    }}>
+      <div style={{
+        // border:'2px solid',
+        width:'10%',
+        marginLeft:'340px',
+        textAlign:'center',
+      }}><p>Coin</p></div>
+      <div style={{
+        // border:'2px solid',
+        width:'4%',
+        textAlign:'center',
+        marginLeft:'50px'
+      }}><p>Price</p></div>
+      <div style={{
+        // border:'2px solid',
+        width:'6%',
+        textAlign:'center',
+        marginRight:'270px'
+      }}><p>Volume</p></div>
+      <div style={{
+        // border:'2px solid',
+       width:'10%',
+       textAlign:'center',
+       marginLeft:'-300px'
+      }}><p>Price Change</p></div>
+      <div style={{
+        // border:'2px solid',
+        width:'6%',
+        textAlign:'center',
+        marginRight:'340px'
+      }}><p>Mkt Cap</p></div>
+    </div>
+    {filteredCoins.map(coin => {
+      return (
+        <Coin
+          key={coin.id}
+          name={coin.name}
+          price={coin.current_price}
+          symbol={coin.symbol}
+          marketcap={coin.total_volume}
+          volume={coin.market_cap}
+          image={coin.image}
+          priceChange={coin.price_change_percentage_24h}
+        />
+      );
+    })}
+  </div>
+);
+
+
 }
 
-export default Widgets
+
+export default CoinTable
+
+
+
+
+
+
+
+

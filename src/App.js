@@ -7,7 +7,7 @@ import Home from './components/Home'
 import Signup from './components/Signup'
 import Footer from './components/Footer'
 // import Chatbot from "./components/chatbot/Chatbot";
-import Widgets from "./components/Widgets";
+import CoinTable from "./components/Widgets";
 import CoinCalculator from "./components/CoinCalculator";
 import Testimonials from "./components/Testimonials"
 
@@ -19,7 +19,7 @@ function App() {
     <NavbarComp/>
     <Home/>
     <Featured />
-    <Widgets/>
+    <CoinTable/>
     <CoinCalculator/>
     <Signup />
     {/* <Chatbot /> */}
