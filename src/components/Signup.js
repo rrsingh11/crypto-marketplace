@@ -18,7 +18,7 @@ const Signup = () => {
                     <p>Must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and will give you a complete account our off work system, expound the actual teachings of the great explorer sed of the truth.</p>
                     <div className='input-container'>
                         {/* <input type='email' placeholder='Enter your email' /> */}
-                        <button className='btn'>Buy Now</button>
+                        <button className='btn'><a href='https://www.bitbecoin.com/en_US/register'>Buy Now</a></button>
                     </div>
                 </div>
 

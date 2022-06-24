@@ -76,7 +76,7 @@ const Footer = () => {
                 Foundation <br /> Soeul, South Korea.
               </li>
             </ul>
-            <img src={Footer_log}/>
+            <img alt="logo" src={Footer_log}/>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@ const Footer = () => {
             <div className="csection">
               <div className="copyright">
                 Copyrights &copy; 2022 All Rights Reserved by{" "}
-                <a href="#">Bitbe groups.</a>
+                <a href='/'>Bitbe groups.</a>
               </div>
             </div>
             {/* <div className="cards-column">

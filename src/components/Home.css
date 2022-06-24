@@ -1,7 +1,12 @@
+.hero {
+    background: url(../assets/background-1.jpg);
+}
+
 .hero .container {
+    color: #fff;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 4rem auto;
+    margin: 2rem auto auto;
     justify-content: center;
     align-items: center;
     padding: 1rem;
@@ -16,7 +21,9 @@
 }
 
 .hero .input-container {
+    border: #fff;
     padding: 1rem 0;
+    color: #fff;
 }
 
 .hero .right {

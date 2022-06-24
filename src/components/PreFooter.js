@@ -13,25 +13,25 @@ const PreFooter = () => {
     <div className='grand-parent'>
       <div className='parent'>
         <div className='child'>
-              <img src={client1}/>
+              <img alt='client-image1' src={client1}/>
         </div>
         <div className='child'>
-        <img src={client2}/>
+        <img alt='client-image2' src={client2}/>
         </div>
         <div className='child'>
-        <img src={client3}/>
+        <img alt='client-image3' src={client3}/>
         </div>
         <div className='child'>
-        <img src={client4}/>
+        <img alt='client-image4' src={client4}/>
         </div>
         <div className='child'>
-        <img src={client5}/>
+        <img alt='client-image5' src={client5}/>
         </div>
         <div className='child'>
-        <img src={client6}/>
+        <img alt='client-image6' src={client6}/>
         </div>
         <div className='child'>
-        <img src={client7}/>
+        <img alt='client-image7' src={client7}/>
         </div>
       </div>
     </div>

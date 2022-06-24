@@ -22,7 +22,7 @@ const Testimonials = () => {
               <p>Chairman, IBAF and Bitbe Group</p>
           </div>
           <div className='user-img'>
-                <img src={Chairman} />
+                <img alt='chairman' src={Chairman} />
           </div>
         </div>
       </div>

@@ -113,7 +113,7 @@ const Featured = () => {
                                 </span>
                             )}
                     </div>
-                    <div className='card'>
+                    {/* <div className='card'>
                         <div className='top'>
                             <img src={data[4].image} alt='' />
                         </div>
@@ -154,7 +154,7 @@ const Featured = () => {
                                     {data[5].price_change_percentage_24h.toFixed(2)}%
                                 </span>
                             )}
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Right */}
