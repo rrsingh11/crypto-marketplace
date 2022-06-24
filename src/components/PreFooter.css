@@ -1,9 +1,10 @@
 
 .grand-parent {
+    background: url(../assets/pattern-1.png);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: rgba(199, 237, 237, 0.95);
+    background: rgba(255, 255, 255, 0.95);
     display: flex;
     justify-content: space-around;
     margin-bottom: -30px;
