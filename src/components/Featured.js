@@ -162,7 +162,7 @@ const Featured = () => {
                 <div className='right'>
                     <h2>Explore top Crypto's Like Bitcoin, Ethereum, and Dogecoin</h2>
                     <p>See all available assets: Cryptocurrencies and NFT's</p>
-                    <button className='btn'> See More Coins </button>
+                    <button className='btn'> <a href='https://www.bitbecoin.com/en_US/market'>See More Coins </a></button>
                 </div>
             </div>
 
