@@ -1,9 +1,9 @@
 import React from 'react';
-import './dropdown.css';
+import './download-dropdown.css';
 import qr_image from '../assets/download_qr_code.png';
 
 
-const Dropdown = () =>{
+const DownloadDropdown = () =>{
     return(
     <div className="dropdown">
         <div className="qr">
@@ -18,5 +18,5 @@ const Dropdown = () =>{
     )
 }
 
-export default Dropdown;
+export default DownloadDropdown;
 
