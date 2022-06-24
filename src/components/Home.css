@@ -1,12 +1,22 @@
 .hero {
-    background: url(../assets/background-1.jpg);
+    background: url(../assets/image-5.jpg);
+    width: 100%;
+    height: 85vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* border: 2px solid blue; */
+    display: flex;
+    align-items: center;
 }
 
 .hero .container {
+    /* border: 2px solid red; */
+    height: auto;
+    width: auto;
     color: #fff;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 2rem auto auto;
+    /* margin: 2rem auto; */
     justify-content: center;
     align-items: center;
     padding: 1rem;
