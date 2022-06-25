@@ -10,7 +10,7 @@ const Home = () => {
                 {/* Left Side */}
                 <div className='left'>
                     <p>Buy & Sell 600+ cryptos using Bitbe</p>
-                    <h1>Invest in Cryptocurreny with Bibte Exchange</h1>
+                    <h1>Invest in Cryptocurreny with Bitbe Exchange</h1>
                     <p>Buy, Sell, and store hundreds of cryptocurrencies</p>
                     <div className='input-container'>
                         <input type='email' placeholder='Enter your email' />
