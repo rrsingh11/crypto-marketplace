@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import TopBand from "./components/TopBand";
 import NavbarComp from './components/Navbar'
 import Featured from './components/Featured'
@@ -13,7 +13,17 @@ import Testimonials from "./components/Testimonials"
 import PreFooter from "./components/PreFooter";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const spinner = document.getElementById("spinner");
+  if (spinner) {
+    setTimeout(() => {
+      spinner.style.display = "none";
+      setLoading(false);
+    }, 5000);
+  }
   return (
+    !loading &&(
+
     <>
     <TopBand />
     {/* <Navbar/> */}
@@ -28,6 +38,7 @@ function App() {
     <PreFooter/>
     <Footer />
     </>
+    )
   );
 }
 
