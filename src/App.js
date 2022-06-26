@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from "react";
+import TopBand from "./components/TopBand";
+import NavbarComp from './components/Navbar'
+import Featured from './components/Featured'
+// import Navbar from "./components/Navbar";
+import Home from './components/Home'
+import Signup from './components/Signup'
+import './components/Signup.css'
+import Footer from './components/Footer'
+// import Chatbot from "./components/chatbot/Chatbot";
+import CoinTable from "./components/Widgets";
+// import CoinCalculator from "./components/CoinCalculator";
+import Testimonials from "./components/Testimonials"
+import PreFooter from "./components/PreFooter";
+import { ThemeContext } from "./components/Context.js";
+import './components/Testimonials.css'
+import './components/Featured.css'
+import Chat from './components/Chat'
+
 
 function App() {
+  const [theme,setTheme]=useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <ThemeContext.Provider value={{theme,setTheme}}>
+    <div className={theme?"dark-bg":"bg"}>
+    <>
+    <TopBand />
+    {/* <Navbar/> */}
+    <NavbarComp/>
+    <Home/>
+    <Chat/>
+    <Featured />
+    <CoinTable/>
+    {/* <CoinCalculator/> */}
+    <Signup />
+    {/* <Chatbot /> */}
+    <Testimonials/>
+    <PreFooter/>
+    <Footer />
+    </>
     </div>
+    </ThemeContext.Provider>
   );
 }
 
